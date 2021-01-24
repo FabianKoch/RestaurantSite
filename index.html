@@ -8,9 +8,40 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
 <body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header"> <!--navbar-header helps in making the navigation bar more user friendly-->
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <!--pull-left = float left; visible-md and visible-lg to make the logo visible on Desktop and Tablet-->
+            <div id="logo-img"></div>
+          </a>
 
+          <div class="navbar-brand">
+            <a href="index.html"><h1>David Chu's China Bistro</h1></a>
+            <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span>Kosher Certified</span>
+            </p>
+          </div>
+
+          <!--Burgher icon for menu when on mobile view-->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span><!--"sr" stands for screen reader only, will never display-->
+            <span class="icon-bar"></span><!--horizontal line-->
+            <span class="icon-bar"></span>
+          </button>
+
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
