@@ -89,6 +89,42 @@ body {
   border: 2px solid #3F0C1F;
 }
 
+#menu-tile, #specials-tile, #map-tile {/*the commas between the ids make them share the style */
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px; /*useful to separate the tiles when they start stacking on top of each other*/
+  position: relative;/*Will set an anchor for the child elements*/
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {/*hover effect*/
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/specials-tile.jpg') no-repeat;
+  background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;/*positions the spans on absolutely relative to the container*/
+  bottom: 0;/*0 distance from the bottom*/
+  right: 0;/*0 distance from the right*/
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+/* END HOME PAGE */
+
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
@@ -175,9 +211,31 @@ body {
   }
 
   /* End Header */
+
   /* Home Page */
   .container .jumbotron {
     margin-top: 30px;
     padding: 0;
+  }
+
+  #menu-tile, #specials-tile {
+    width: 360px;
+    margin: 0 auto 15px;
+  }
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 5px;
+    font-size: 6vw;
+  }
+  /* End Header */
+
+  /* Home page */
+  #menu-tile, #specials-tile {
+    width: 280px;
+    margin: 0 auto 15px; /*margin up = 0; sides = auto; down = 15*/
   }
 }
